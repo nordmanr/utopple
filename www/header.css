@@ -1,0 +1,38 @@
+/*
+	This file stores all the style rules for
+	the header of each page.  Each page should
+	have a #headerDiv and #headerSpacer
+*/
+#headerDiv{
+	position: fixed;
+	left:0px;
+	top:0px;
+
+	width:100%;
+	height:70px;
+
+	background:#0a2351;
+	
+	z-index:999;
+}
+#headerDiv table{
+	width:100%;
+	position:relative;
+	top:30%;
+}
+#headerDiv table tr td{
+	text-align:center;
+}
+#headerDiv table tr td a{
+	color:#e6e9ed;
+	text-decoration:none;
+}
+
+#headerSpacer{
+	position:absolute;
+	left:0;
+	top:0;
+
+	width:100%;
+	height:70px;
+}

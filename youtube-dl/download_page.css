@@ -1,0 +1,41 @@
+#links{
+	position:relative;
+	left:50%;
+	width:100%;
+	transform:translate(-50%,0);
+}
+#links table{
+	position:relative;
+	left:50%;
+	transform:translate(-50%,0);
+}
+#links table tbody tr td{
+	padding:5px;
+	text-align:center;
+}
+#links table tbody tr td a{
+	text-decoration:none;
+}
+
+span{
+	font-size:2vw;
+}
+a{
+	font-size:2vw;
+}
+#title span{
+	font-size:4vw;
+}
+
+
+@media (max-width: 1050px){
+	span{
+		font-size:20px;
+	}
+	a{
+		font-size:20px;
+	}
+	#title span{
+		font-size:40px;
+	}
+}
