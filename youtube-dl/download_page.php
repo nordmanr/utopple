@@ -13,7 +13,7 @@
 			<?php
 				$url = $_GET["url"];  //Get from page parameters
 				//Next is the line of code to download the audio
-				$cat = "youtube-dl --embed-thumbnail --extract-audio --audio-format mp3 --restrict-filenames --output '/var/www/net/glasscloud/youtube-dl/downloads/%(title)s.%(ext)s' ".$url."";
+				$cat = "youtube-dl --embed-thumbnail --extract-audio --audio-format mp3 --restrict-filenames --output '/var/www/com/utopple/youtube-dl/downloads/%(title)s.%(ext)s' ".$url."";
 				shell_exec($cat);
 				//Get title of video
 				$title = exec("youtube-dl --skip-download --get-title --restrict-filenames --no-warnings ".$url);

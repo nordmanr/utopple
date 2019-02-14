@@ -29,7 +29,7 @@
 	<body>
 		<div id="main">
 			<?php
-				$path = "/var/www/net/glasscloud/youtube-dl/downloads";
+				$path = "/var/www/com/utopple/youtube-dl/downloads";
 				$files = scandir($path);  //Get array of directory elements
 				for($i=0; $i<count($files); $i++){  //For every file in the downloads folder
 					if(strpos($files[$i], '.mp3')){ //If is .mp3 file
