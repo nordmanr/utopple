@@ -1,0 +1,7 @@
+blue    #26547c
+red     #9b2915
+gold    #e9b44c
+purple  #5d4e60
+black   #1c110a
+white   #dedede
+grey    #c8c8c8
