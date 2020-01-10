@@ -73,6 +73,24 @@
         // Get skills
 
 
+        // Get projects
+            $sql = "SELECT * FROM projects";
+            $result = $conn->query($sql);
+
+            $project_records = array();
+
+            // get all job experiences in a nice array
+            while($row = $result->fetch_assoc()) {
+                array_push($project_records, $row);
+            }
+            usort($project_records, 'compareProjects');
+
+            function compareProjects($a, $b){
+                return $a["priority"]<$b["priority"];
+            }
+        // Get skills
+
+
 
 
 
@@ -88,30 +106,29 @@
     </head>
     <body>
         <div id="intro">
-            <div id="portrait">
-                <img src="portrait.png"/>
-            </div>
             <div id="name">
                 <h2>Robert T. Nordman</h2>
             </div>
             <div id="title">
-                <span>Student at Arizona State University</span>
+                <span>Computer Science (Cybersecurity) Student at Arizona State University</span>
             </div>
             <div id="contact_info">
                 <span>Email: rnordman@protonmail.com</span>
             </div>
-            <table><tr>
-                <td class="accent">&nbsp&nbsp&nbsp</td>
-                <td class="primary">&nbsp&nbsp&nbsp</td>
-                <td class="secondary">&nbsp&nbsp&nbsp</td>
-                <td class="tertiary">&nbsp&nbsp&nbsp</td>
-                <td class="dark">&nbsp&nbsp&nbsp</td>
-            </tr></table>
         </div>
         <div id="about">
-            <span>
-
-            </span>
+            <h2>About</h2>
+            <div>
+                <span>
+                    I'm a computer science student at Arizona State University.  The most important thing to know about me is that I love learning.  I've always been one to 
+                    learn whenever possible.  Whether it be learning the intricacies of the systems I use at work or spending my spare time learning about web hosting in my, 
+                    I'm always looking to expand what I know.  Early in my high school career I dabbled a bit in Computer Aided Design, but as an upper classman, 
+                    I started into the computer science courses the school offered.  I began with Java, and quickly expanded into learning more in my spare time, messing 
+                    around in the realities of hosting a website.  From there I went onto building a more complex network at my house, with a hardware firewall, my own DNS 
+                    server, and some VPNs to allow myself to remote into my home network.  Now I'm working on a couple android apps and continuing to work on my website as 
+                    I find time.
+                </span>
+            </div>  
         </div>
         <div id="background">
             <div id="job_experience">
@@ -147,20 +164,25 @@
             <table><tbody>
                 <?php
                     foreach($skills_records as $row){
-                        echo "<tr><td>".$row["title"]."</td></tr>";
+                        if($row["show"]){
+                            echo "<tr><td>".$row["title"]."</td></tr>";
+                        }
                     }
                 ?>
             </tbody></table>
         </div>
-        <div id="accomplishments">
-            <div id="projects">
-                <h2>Accomplishments</h2>
-                <span>Shining Force Station Website</span><br>
-                <span>Utopple Website</span><br>
-                <span>Christ Lutheran Avon Lake Website</span><br>
-                <span>Keepsake Video Memories Website</span><br>
-                <span>n11 Android App</span><br>
-            </div>
+        <div id="projects">
+            <h2 title="Some websites are self hosted on home network.  Slow speeds should be expected.">Projects</h2>
+
+            <table><tbody>
+                <?php
+                    foreach($project_records as $row){
+                        if($row["show"]){
+                            echo "<tr><td>".$row["title"]."</td><td>".$row["details"]."</td></tr>";
+                        }
+                    }
+                ?>
+            </tbody></table>
         </div>
     </body>
 </html>

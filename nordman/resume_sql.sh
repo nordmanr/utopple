@@ -62,5 +62,21 @@ INSERT INTO `resume`.`skills` (
     ('Signal Flow',true,1010),
     ('A/V Systems',true,1020),
     ('Computer Repair',true,1050);
+
+CREATE TABLE `projects` (
+    `id` INT NOT NULL AUTO_INCREMENT, 
+    `title` VARCHAR(50) NOT NULL, 
+    `details` VARCHAR(250) NOT NULL, 
+    `show` BOOLEAN NOT NULL, 
+    `priority` INT NOT NULL, 
+    PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `resume`.`projects` (
+    `title`,`details`,`show`,`priority`)
+    VALUES
+    ('Shining Force Station Website','<a href="https://www.shiningforcestation.com">Shining Force Station</a>".  Responsible for hosting and construction of site.',true,8490),
+    ('uToppple Website','<a href="https://nordman.utopple.com/">uTopple</a>.  Responsible for hosting and construction of site.',true,8480),
+    ('Christ Lutheran Avon Lake Website','<a href="https://www.christlutheranavonlake.org/">Christ Lutheran Avon Lake</a>.  Responsible for migrating over to Squarespace and custom navigation tools',true,8470),
+    ('Keepsake Video Memories Website','<a href="https://www.keepsakevm.com/">Keepsake VM</a>.  Repsonsible for migrating over to Squarespace.',true,8460),
+    ('n11 Android App','<a href="https://code.utopple.com/">Main Repo</a>.  Built an app repliacting the functionality of the mobile game 2048.',true,1050);
 EOF
 

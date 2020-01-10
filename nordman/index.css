@@ -20,6 +20,34 @@ body{
     border: 2px solid #ffcb47;
 }
 
+/* ABOUT */
+    #about{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        width:80%;
+        border: 3px solid #4a5043;
+        padding-left:20px;
+        padding-right:20px;
+        background: #8ab2b9;
+    }
+    #about h2{
+        width:100%;
+        text-align:center;
+    }
+    #about div{
+        padding:20px;
+        margin-bottom: 10px;
+        background: #7aa2a9;
+    }
+    #about span{
+        width:100%;
+        text-align:center;
+    }
+/* ABOUT */
+
 /* JOB EXPERIENCE */
     #job_experience{ 
         display: block;
@@ -118,6 +146,39 @@ body{
         text-align: center;
     }
 /* SKILLS */
+
+/* PROJECTS */
+    #projects{ 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width:80%;
+        border: 3px solid #4a5043;
+        background: #8ab2b9;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    #projects h2{
+        width:100%;
+        text-align:center;
+    }
+    #projects table{
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+        border-spacing:10px;
+        width:100%;
+        background: #7aa2a9;
+    }
+    #projects td{
+        text-align: center;
+    }
+    #projects td:nth-child(1) {  
+        font-weight: bold;
+      }
+      
+/* PROJECTS */
 
 .accent{
     background: #ffcb47;
