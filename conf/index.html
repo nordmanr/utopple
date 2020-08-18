@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">		
 		<title>Site Administration</title>
 		<style>
 			a{
@@ -15,22 +16,35 @@
 			.n{
 				color:red;
 			}
+			.a{
+				color:orange;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>Remote Services</h1>
 		<ul>
 			<li><a class="n" href="./info.php">PHP Info</a></li>
-	                <li><a class="y" href="./phpmyadmin">phpmyadmin</a></li>
+	                <li><a class="a" href="./phpmyadmin">phpmyadmin</a></li>
+                        <li><a class="a" href="https://conf.utopple.com/pi/admin/index.php">Pi-hole</a></li>
+			<li><a class="a" href="https://conf.utopple.com/sonicwall/">Sonicwall Firewall</a></li>
+			<li><a class="a" href="https://conf.utopple.com/arris/">Arris Modem</a></li>
+			<li><a class="a" href="https://conf.utopple.com/unifi/">Unifi Router</a></li>
+			<li><a class="a" href="https://conf.utopple.com/ddwrt/">DDWRT Router</a></li>
                 </ul>
 		<h1>Local Services</h1>
 		<ul>
-			<li><a class="y" href="http://192.168.0.1">Modem</a></li>
-			<li><a class="y" href="https://192.168.1.1">Router</a></li>
-			<li><a class="y" href="http://192.168.1.3/admin">Pi-hole</a></li>
+			<li><a class="y" href="http://192.168.0.1">Arris Modem</a></li>
+                        <li><a class="y" href="http://192.168.1.1">Unifi Router</a></li>
+			<li><a class="y" href="http://192.168.6.41/admin">Pi-hole</a></li>
 			<li><a class="y" href="http://192.168.5.1">DDWRT Router</a></li>
-			<li><a class="y" href="http://192.168.6.1:1080">Firewall</a></li>
+			<li><a class="y" href="http://192.168.6.1">Firewall</a></li>
 		</ul>
+		<br><br>
+		<div>
+			<h2>Legend</h2>
+			<span class="y">● Enabled</span><br><span class="n">● Disabled</span><br><span class="a">● Restricted</span>
+		</div>
 	</body>
 </html>
 
