@@ -28,6 +28,9 @@
             a:link, a:visited, a:hover, a:active {
                 color: yellow;
             }
+            input, span, a {
+                font-size: 4vw;
+            }
         </style>
     </head>
     <body>
