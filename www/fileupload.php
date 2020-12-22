@@ -41,7 +41,7 @@
                     $uploadedFile = $uploadDir . basename($_FILES['upload']['name']);
 
                     if (move_uploaded_file($_FILES['upload']['tmp_name'], $uploadedFile)) {
-                        chmod($uploadedFile, 0666);
+                        chmod($uploadedFile, 0644);
                         echo '<span>File was uploaded successfully.</span>';
                         echo '<br/><a href="fileupload.php">Go back...</a>';
                         echo '<br/><a href="./uploads/">View uploads</a>';
