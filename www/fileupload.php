@@ -40,6 +40,8 @@
                     $uploadDir = './uploads/';
                     $uploadedFile = $uploadDir . basename($_FILES['upload']['name']);
 
+                    exit('Feature disabled by admin');
+
                     if (move_uploaded_file($_FILES['upload']['tmp_name'], $uploadedFile)) {
                         chmod($uploadedFile, 0644);
                         echo '<span>File was uploaded successfully.</span>';
